@@ -52,8 +52,5 @@ function formatarMilissegundos(tempo) {
 	if (tempo < 10) {
 		tempo = "0" + tempo;
 	}
-	else if (tempo < 100) {
-		tempo = "" + tempo;
-	}
 	return tempo;
 }
