@@ -55,3 +55,9 @@ button {
 button:hover {
 	background-color: var(--fundoBotaoHover);
 }
+
+footer{
+    margin-top: 15px;
+    color: rgba(19, 19, 179, 0.322);
+    text-shadow: none;
+}
