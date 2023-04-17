@@ -1,32 +1,57 @@
+:root{
+    --letraTitulo: rgb(6, 2, 42);
+    --letraCronometro: rgb(1, 10, 16);
+    --letraBotao: white;
+    --fundoPagina: rgba(1, 82, 255, 0.313);
+    --fundoBotao: blue;
+    --fundoBotaoHover: darkblue;
+    --bordaBotao: rgb(110, 0, 118);
+    --sombra: 1px 1px 5px rgba(0, 0, 0, 0.502);
+}
+
 body {
 	font-family: Arial, sans-serif;
+    color: var(--letra1);
+    text-shadow: var(--sombra);
+    background-color: var(--fundoPagina);
+    margin: auto;
+    text-align: center;
+}
+
+header{
+    color: var(--letraTitulo);
+    text-shadow: var(--sombra);
 }
 
 #cronometro {
+    color: var(--letraCronometro);
+    text-shadow: var(--sombra);
 	font-size: 40px;
 	font-weight: bold;
 	padding: 20px;
 	margin-bottom: 20px;
-	border: 1px solid #ccc;
+	
 }
 
 #resultado {
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 20px;
+    color: var(--letra1);
 }
 
 button {
 	font-size: 20px;
 	padding: 10px 20px;
 	margin-right: 10px;
-	background-color: #333;
-	color: #fff;
-	border: none;
+	background-color: var(--fundoBotao);
+	color: var(--letraBotao);
+	border: 1px solid var(--bordaBotao);
+    box-shadow: var(--sombra);
 	border-radius: 5px;
 	cursor: pointer;
 }
 
 button:hover {
-	background-color: #666;
+	background-color: var(--fundoBotaoHover);
 }
