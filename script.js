@@ -1,0 +1,44 @@
+let cronometro = document.getElementById("cronometro");
+let iniciar = document.getElementById("iniciar");
+let pausar = document.getElementById("pausar");
+let zerar = document.getElementById("zerar");
+let resultado = document.getElementById("resultado");
+let segundos = 0;
+let minutos = 0;
+let horas = 0;
+let intervalo;
+
+function iniciarCronometro() {
+	intervalo = setInterval(function() {
+		segundos++;
+		if (segundos == 60) {
+			segundos = 0;
+			minutos++;
+			if (minutos == 60) {
+				minutos = 0;
+				horas++;
+			}
+		}
+		cronometro.innerHTML = formatarTempo(horas) + ":" + formatarTempo(minutos) + ":" + formatarTempo(segundos);
+	}, 1000);
+}
+
+function pausarCronometro() {
+	clearInterval(intervalo);
+}
+
+function zerarCronometro() {
+	clearInterval(intervalo);
+	cronometro.innerHTML = "00:00:00";
+	resultado.innerHTML = "";
+	segundos = 0;
+	minutos = 0;
+	horas = 0;
+}
+
+function formatarTempo(tempo) {
+	if (tempo < 10) {
+		tempo = "0" + tempo;
+	}
+	return tempo;
+}
