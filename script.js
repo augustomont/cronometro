@@ -24,7 +24,7 @@ function iniciarCronometro() {
 				}
 			}
 		}
-		cronometro.innerHTML = formatarTempo(horas) + ":" + formatarTempo(minutos) + ":" + formatarTempo(segundos) + ":" + formatarMilissegundos(milissegundos);
+		cronometro.innerHTML = formatarTempo(horas) + ":" + formatarTempo(minutos) + ":" + formatarTempo(segundos) + ":" + formatarTempo(milissegundos);
 	}, 10);
 }
 
@@ -42,13 +42,6 @@ function zerarCronometro() {
 }
 
 function formatarTempo(tempo) {
-	if (tempo < 10) {
-		tempo = "0" + tempo;
-	}
-	return tempo;
-}
-
-function formatarMilissegundos(tempo) {
 	if (tempo < 10) {
 		tempo = "0" + tempo;
 	}
